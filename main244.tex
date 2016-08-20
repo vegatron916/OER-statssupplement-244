@@ -1,0 +1,112 @@
+\documentclass[12pt]{book}
+\title{MTH 244 Supplement to OpenStax College \emph{Introductory Statistics}}
+%\author{Emiliano Vega \& Ralf Youtz}
+%\date{\today}
+
+\usepackage{amsmath,
+			amsfonts,
+			amssymb,
+			amsthm,
+			mleftright}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage[super]{nth}
+\newtheorem{example}{Example}
+
+\usepackage{enumitem}
+% set the second-level and third-level enumerated items
+% to format automatically
+%\setlist[enumerate,1]{label*=(\Alph*)}
+%\setlist[enumerate,2]{label*=\Roman*.}
+%\setlist[enumerate,3]{label*=\arabic*.}
+% or you could create your own list environment, separate from the enumerate environment
+\newlist{mylist}{enumerate}{5}
+\setlist[mylist,1]{label*=\arabic*.}
+\setlist[mylist,2]{label*=\arabic*.}
+\setlist[mylist,3]{label*=\arabic*.}
+\DeclareMathOperator{\SE}{SE}   %THIS IS AMAZING---the thing I never looked up that I've been waiting for!!!!
+
+\usepackage{xcolor}    %color options
+\usepackage{blindtext} %use to check formatting
+
+\usepackage{fancyhdr}		%fancy header/footer ready to go
+\lhead{\em\small\rightmark}			% left header
+%\chead{\small Youtz}					% central header
+\rhead{\em\small\leftmark}		% right header
+%\lfoot{}								% left footer
+\lfoot{You can find the \emph{Open Intro Statistics} text for free at \url{https://www.openintro.org/download.php?file=os3_tablet&referrer=/stat/textbook.php}.}			
+\cfoot{}			% central footer
+%\rfoot{}								% right footer
+
+%\usepackage[left=1.5 in,	
+%			right=1.5 in, 
+%			top=1.5 in, 
+%			bottom=1.5 in]{geometry} %sets margins
+% paragraph decisions:
+%\setlength{\parskip}{0.5 pc}     %space between paragraphs; 	pc is pica; pt is point
+%\setlength{\parindent}{2 em}     %indent space;  		em is em-space; ex is ex-space
+
+\usepackage{multicol}		% creates environmnets with columns
+\setlength{\columnsep}{2pc}     % distance between columns
+\setlength{\columnseprule}{0pt} % width of line separating columns
+
+\usepackage{calc}		% allows measure calculation for minipage dimension, etc.
+
+%%%%%%%%%%% TABLE STUFF STARTS HERE %%%%%%%%%%%%%%%
+
+\usepackage{multirow}
+
+\usepackage{array}					% needed for next command
+%\setlength{\extrarowheight}{0.5pc}		% adds 0.5pc height to tabular rows
+
+%\setlength{\tabcolsep}{1cm} 	%buffer space on left and right of tabular columns
+
+\usepackage{colortbl,xcolor}		% allows table coloring
+
+\usepackage{caption}				% more captioning options
+%\captionsetup{font=sc} 					% small capital letters
+%\captionsetup{labelfont=bf,textfont=it} 	% bold label, italic caption
+\captionsetup{labelfont=sc}
+
+\usepackage{subfig} 				% allows ``subfloats''
+
+\usepackage{booktabs}			% better table design options
+
+\usepackage[colorlinks]{hyperref}
+
+%%%%%%%%%%%%%%% MODULE 5: FIGURES PACKAGES HERE %%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}	% graphics options
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{pgfplots}
+%\pgfplotsset{compat=1.11}     %Use the command \pgfplotsset{} in the preamble to globally set all of the axis options in the examples in subsection pgfplots template.
+
+%\newcommand{\addition}[3]{#1+#2=#3}
+
+\begin{document}
+\pagestyle{fancy}
+
+\frontmatter
+
+\maketitle
+
+\include{license}
+
+\include{preface}
+
+%\tableofcontents
+%\listoffigures
+%\listoftables
+
+\mainmatter
+
+\include{confidenceIntervals}
+
+%\include{hypothesisTestingWithTwoSamples}
+
+%\include{theChiSquareDistribution}
+
+\include{ANOVA}
+
+\include{simpleLinearRegressionAndCorrelation}
+
+\end{document}

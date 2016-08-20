@@ -1,0 +1,24 @@
+\BOOKMARK [0][-]{chapter.8}{Confidence Intervals}{}% 1
+\BOOKMARK [1][-]{section.8.1}{Conditions}{chapter.8}% 2
+\BOOKMARK [2][-]{subsection.8.1.1}{CI for Mean Conditions}{section.8.1}% 3
+\BOOKMARK [2][-]{subsection.8.1.2}{CI for Proportion Conditions}{section.8.1}% 4
+\BOOKMARK [1][-]{section.8.2}{CI as Hypothesis Test}{chapter.8}% 5
+\BOOKMARK [1][-]{section.8.3}{CI for Difference of Means}{chapter.8}% 6
+\BOOKMARK [1][-]{section.8.4}{CI for Difference of Proportions}{chapter.8}% 7
+\BOOKMARK [1][-]{section.8.5}{Construct and interpret a confidence interval about the difference between two population means using paired samples.}{chapter.8}% 8
+\BOOKMARK [1][-]{section.8.6}{Technology with confidence intervals}{chapter.8}% 9
+\BOOKMARK [2][-]{subsection.8.6.1}{Input two independent samples and execute the commands to construct a two-sample difference of means confidence interval and interpret the output}{section.8.6}% 10
+\BOOKMARK [2][-]{subsection.8.6.2}{Input two independent samples and execute the commands to construct a two-sample difference of proportions confidence interval and interpret the output}{section.8.6}% 11
+\BOOKMARK [2][-]{subsection.8.6.3}{Input two paired samples and execute the commands to construct a one-sample confidence interval and interpret the output}{section.8.6}% 12
+\BOOKMARK [0][-]{chapter.14}{ANOVA}{}% 13
+\BOOKMARK [1][-]{section.14.1}{Use a multiple comparisons method to determine which pairs of means differ; interpret the results}{chapter.14}% 14
+\BOOKMARK [1][-]{section.14.2}{Identify Marginal Probabilities}{chapter.14}% 15
+\BOOKMARK [0][-]{chapter.13}{Simple Linear Regression And Correlation}{}% 16
+\BOOKMARK [1][-]{section.13.1}{Check the conditions associated with constructing a least-squares linear regression model, and construct such a model}{chapter.13}% 17
+\BOOKMARK [1][-]{section.13.2}{Specify the probability distribution of the random error term, and estimate the standard deviation of this distribution.}{chapter.13}% 18
+\BOOKMARK [1][-]{section.13.3}{Construct and interpret a confidence interval to estimate the slope of the population regression model.}{chapter.13}% 19
+\BOOKMARK [1][-]{section.13.4}{Technology for the least-squares line for estimation and prediction}{chapter.13}% 20
+\BOOKMARK [2][-]{subsection.13.4.1}{Construct and interpret a residual plot}{section.13.4}% 21
+\BOOKMARK [2][-]{subsection.13.4.2}{Construct and interpret a confidence interval for the mean value of the response variable when the explanatory variable takes on a specific value.}{section.13.4}% 22
+\BOOKMARK [2][-]{subsection.13.4.3}{Using technology, construct and interpret a prediction interval for an individual value of the response variable when the explanatory variable takes on a specific value.}{section.13.4}% 23
+\BOOKMARK [2][-]{subsection.13.4.4}{Using technology, input sample data and execute the commands to produce a least-squares regression equation, a fitted line, a residual plot, and r2; interpret the output.}{section.13.4}% 24

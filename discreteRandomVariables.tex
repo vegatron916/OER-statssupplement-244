@@ -1,0 +1,173 @@
+\setcounter{chapter}{3}
+\chapter[Discrete Random Vars.]{Discrete Random Variables}
+
+\section{Variance}
+
+We can use expected value, \( \mu \), and standard deviation, \( \sigma \), to summarize a random variable \(X\). 
+
+Recall that 
+\[ \mu = \sum_{x \in X} x P(x)  
+\qquad \text{and} \qquad
+\sigma = \sqrt{ \sum_{x \in X} (x - \mu)^2 P(x) }\]
+
+The square of the standard deviation, \( \sigma^2 \), is called the \emph{variance} of the random variable. The variance is the sum of the products of the squared differences from the mean and their corresponding probabilities:
+\[ \sigma^2 = \sum_{x \in X} (x - \mu)^2 P(x)  \]
+Statisticians use the variance \(\sigma^2\) when considering mathematical transformations of all the outcomes of a random variable, or when combining more than one random variable.
+
+%\emph{Examples can point out variance value in text section 4.2 examples, or provide an additional discrete probability distribution to consider. (PCC Credit Student Factsheet)}
+
+\section[Transformations]{Transformations of Random Variables}
+
+Refer to the \href{http://cnx.org/contents/MBiUQmmY@18.10:X8iM07Af@4/Probability-Distribution-Funct}{``Try It'' Exercise in Section \(4.1\) of \emph{Introductory Statistics}}. The table gives the number of times a post-op patient rings the nurse during a \(12\)-hour shift. The table for the situation, denoted as the random variable \(X\), is shown below. 
+
+\begin{center}
+\begin{tabular}{c|c}
+\(x\)	&	\(P(x)\)	\\ \hline \hline
+\(0\)	&	\(\tfrac{4}{50}\)	\\ \hline 
+\(1\)	&	\(\tfrac{8}{50}\)	\\ \hline
+\(2\)	&	\(\tfrac{16}{50}\)	\\ \hline
+\(3\)	&	\(\tfrac{14}{50}\)	\\ \hline
+\(4\)	&	\(\tfrac{6}{50}\)	\\ \hline
+\(5\)	&	\(\tfrac{2}{50}\)	\\ 
+\end{tabular}
+\end{center}
+
+Using this table, it was found that the expected value is \(\mu=2.32\), the variance is \(\sigma^2=1.4976\) and the standard deviation is \(\sigma=1.2238\).
+
+\begin{example}
+Assume there is a malfunction with the button that rings the nurse. This malfunction causes the nurse to be rung one more time than each patient intends, so if a patient rings the nurse zero times, the malfunction causes one ring. With this malfunction, we can denote the situation as the random variable \(X+1\). The table for the situation is shown below.
+
+\begin{center}
+\begin{tabular}{c|c}
+\(x+1\)	&	\(P(x+1)\)	\\ \hline \hline
+\(1\)	&	\(\tfrac{4}{50}\)	\\ \hline 
+\(2\)	&	\(\tfrac{8}{50}\)	\\ \hline
+\(3\)	&	\(\tfrac{16}{50}\)	\\ \hline
+\(4\)	&	\(\tfrac{14}{50}\)	\\ \hline
+\(5\)	&	\(\tfrac{6}{50}\)	\\ \hline
+\(6\)	&	\(\tfrac{2}{50}\)	\\ 
+\end{tabular}
+\end{center}
+
+We find the expected value of the random variable \(X+1\) to be
+\[\mu=1(\tfrac{4}{50})+2(\tfrac{8}{50})+3(\tfrac{16}{50})+4(\tfrac{14}{50})+5(\tfrac{6}{50})+6(\tfrac{2}{50})=3.32.\]
+
+Note that all the outcomes of the random variable \(X\) were increased by one and this made the expected value increase by one, as we see in the random variable \(X+1\).
+
+We calculate the variance \(\sigma^2\) of the random variable \(X+1\) like so:
+\begin{align*}
+\sigma^2 &=(1-2.32)^2(\tfrac{4}{50}) \\
+  &+(2-2.32)^2(\tfrac{8}{50}) \\ 
+  &+(3-2.32)^2(\tfrac{16}{50}) \\
+  &+(4-2.32)^2(\tfrac{14}{50}) \\
+  &+(5-2.32)^2(\tfrac{6}{50}) \\
+  &+(6-2.32)^2(\tfrac{2}{50}) \\
+  &=1.4976.
+\end{align*}
+
+Then we calculate the standard deviation \(\sigma\) of the random variable \(X+1\) by finding the square root of the variance \(\sigma^2\):
+\[  
+\sigma = \sqrt{\sigma^2} = \sqrt{1.4976} = 1.2238.
+\]
+Note this is the same variance and standard deviation as the original random variable \(X\). We have not changed the distance of any outcome from the expected value, therefore we have not changed the spread. 
+\end{example}
+
+To summarize, for any random variable \(X\), if we add or subtract the same value  to every outcome (without affecting their likelihoods) we denote that transformation by \( X \pm c \). Our work above shows that \( E(X \pm c) = E(X) \).
+
+\begin{example}
+Imagine a different ringer malfunction: Every time the patient presses the button to ring the nurse, it rings twice! This means the people who press the button once actually ring the nurse twice! With this malfunction, we can denote the situation as the random variable \(2X\). The table for the situation:
+\begin{center}
+\begin{tabular}{c|c}
+\(2x\)	&	\(P(2x)\)	\\ \hline \hline
+\(0\)	&	\(\tfrac{4}{50}\)	\\ \hline 
+\(2\)	&	\(\tfrac{8}{50}\)	\\ \hline
+\(4\)	&	\(\tfrac{16}{50}\)	\\ \hline
+\(6\)	&	\(\tfrac{14}{50}\)	\\ \hline
+\(8\)	&	\(\tfrac{6}{50}\)	\\ \hline
+\(10\)	&	\(\tfrac{2}{50}\)	\\ \hline
+\end{tabular}
+\end{center}
+We calculate the expected value \(\mu\) to be 
+\[\mu=0(\tfrac{4}{50})+2(\tfrac{8}{50})+4(\tfrac{16}{50})+6(\tfrac{14}{50})+8(\tfrac{6}{50})+10(\tfrac{2}{50})=4.64\]
+
+Note this is twice the expected value of the original random variable \(X\), since all the distances from the original expected value have been doubled.
+
+We calculate the variance \(\sigma^2\) of the random variable \(2X\) to be
+\begin{align*}
+\sigma^2
+&=(0-4.64)^2(\tfrac{4}{50}) \\
+&+(2-4.64)^2(\tfrac{8}{50}) \\
+&+(4-4.64)^2(\tfrac{16}{50}) \\
+&+(6-4.64)^2(\tfrac{14}{50}) \\
+&+(8-4.64)^2(\tfrac{6}{50}) \\
+&+(10-4.64)^2(\tfrac{2}{50}) \\
+&=5.9904
+\end{align*}
+
+We calculate the standard deviation \(\sigma\) of the random variable \(2X\) to be
+\[
+\sigma = \sqrt{ \sigma^2 } = \sqrt{5.9904} = 2.4475.
+\]
+\end{example}
+
+
+\begin{example}
+The malfunction has been fixed! A new nurse begins their shift and has two patients, \(X_{1}\) and  \(X_{2}\), in post op. The nurse is curious about the average number of times the patients will ring in total, that is any patient  \(X_{1}\) and  \(X_{2}\).
+
+We denote the number of times both patients ring as the random variable  \(X_{1}+X_{2}\). The table for this combined variable would have outcomes ranging from \(0\) to \(10\), since both patients could ring up to  \(5\)times, but determining the probability of each outcome would be quite a challenge. (That'd be  \(11\) probability problems!) Luckily, statisticians have methods to compute expected value and standard deviation of  \(X_{1}+X_{2}\) without reference to a new table.
+
+For expected value, the nurse expects patient \( X_{1} \) on average to ring them  \(\mu_{X_{1}}=2.32\) times and patient 
+\( X_{2} \) to ring them \( \mu_{ X_{2} }=2.32\) times, since both random variables \(X_{1}\) and \(X_{2}\) have the same expected value,  \(\mu\). Thus the expected value for  \(X_{1}+X_{2}\) is \(\mu_{X_{1}}+\mu_{X_{2}}=2.32+2.32=4.64\) 
+
+The variance and standard deviation calculations are more complicated. One would hope we could simply add the standard deviations for the random variables  \(X_{1}\) and \(X_{2}\) together. The bad news is that will not work. The good news is that statisticians have learned that as long as two random variables are independent---the outcome of one variable does not affect the outcome of the other---we can add their variances. Here, since one patient's needs do not affect the other patient's needs,  \(X_{1}\) and \(X_{2}\) are independent.
+
+Then to calculate the standard deviation of the sum, \(\sigma_{X_{1}+X_{2}}\), we first calculate the variance using the sum of the variances of  \(X_{1}\) and  \(X_{2}\), which is,
+\(\sigma^2_{X_{1}+X_{2}}=\sigma^2_{X_{1}}+\sigma^2_{X_{2}}=1.2238^2+1.2238^2=2.9954\).
+Then take the square root for the standard deviation of the sum: \(\sigma_{X_{1}+X_{2}}=\sqrt{2.9954}=1.7307\)
+\end{example}
+
+To summarize, for a random variable  \(X_{1}\) and  \(X_{2}\), if we add two random variables  \(X_{1}\) and  \(X_{2}\) together, we denote that transformation by  \(X_{1}+X_{2}\). 
+For the expected value of \(X_{1}+X_{2}\), we can add the expected values of  \(X_{1}\) and  \(X_{2}\). For the standard deviation of \(X_{1}+X_{2}\), we must first find the variance. As long as  \(X_{1}\) and  \(X_{2}\) are independent, we can add their variances.
+
+%[Reminder to Ralf: Add note that 2X != X + X.]
+
+\section{Homework}
+
+\begin{enumerate}
+\item  Refer to Example \(4.1\) on page \(229\). The table gives the number of times a post-op patient rings the nurse during a \(12\)-hour shift. The table for the situation, denoted as the random variable \(X\), is shown below.
+
+Using this table, it was found that the expected value is \(\mu=2.32\), the variance is \(\sigma^2=1.4976\) and the standard deviation is \(\sigma=1.2238\). Find the expected value and standard deviation for the following transformations on the random variable \(X\)
+\begin{enumerate}
+\item \(X+7\)			
+\item \(3X\)				
+\item \(X-2\) 
+\end{enumerate}
+
+\item  Your instructor has offered extra credit! They take \(10\) fair dice and put them into a hat. There are \(6\) white dice, \(2\) green dice, \(2\) red dice and \(1\) pink die. The instructor then has everyone draw one die. If you pick a white die, you receive one free point on the next test, if you pick a green die, you receive two free points, five free points for the red die, but if you pick the pink die, you lose \(15\) points.
+
+\begin{enumerate}
+\item  Let \(X\) be the random variable describing the number of free points won or lost as described above. Construct the probability model for \(X\).
+\item  Find the expected value, variance and standard deviation for the random variable \(X\).
+\item  Should the students accept their instructor?s offer? Why or why not?
+\item  In this situation, what is the meaning of \(X+5\)? \(2X\)? \(X+Y\)?
+\end{enumerate}
+
+\item  Las Vegas hotels clean rooms quickly once people have left. The Belagio hotel created the table below for the number of minutes takes to clean a normal room \(N\) and a suite room \(S\).
+
+\begin{center}
+\begin{tabular}{l|cc}
+& \(N\) & \(S\) \\ \hline
+\(\mu\) & 50 & 75 \\
+\(\sigma\) & 20 & 25	
+\end{tabular}
+\end{center}
+
+Find the expected value and standard deviation (and state the meaning in context) for the following transformations to the given random variables
+
+\begin{enumerate}
+\item  \(N-3\)
+\item  \(2S\)	
+\item  \(S+N\)		
+\item  \(N+2S\)
+\end{enumerate}
+\end{enumerate}

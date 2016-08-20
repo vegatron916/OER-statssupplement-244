@@ -1,0 +1,153 @@
+\setcounter{chapter}{2}
+\chapter{Probability}
+
+\section{Bayes Theorem}
+
+The tree diagram in Figure \ref{fig:treeMechanics} shows a situation where an individual leaves their car at a mechanic's shop. There are three mechanics: Miranda, Jose, and Tanya. Miranda is the most experienced mechanic, while Tanya is the least experienced. Miranda repairs 55\% of the cars; Jose repairs 30\% of the cars; and Tanya repairs the remaining 15\% of the cars. Miranda's repairs fail for 5\% of cars on which she works; Jose's fail for 10\%; and Tanya's repairs fail for 20\%.
+
+\begin{figure}
+\centering
+\includegraphics[width=4in]{images/treeMechanics.png}
+\caption{Tree diagram for repairs at the mechanic's shop.}
+\label{fig:treeMechanics}
+\end{figure}
+
+This presents an interesting application of conditional probability. Using the tree diagram above we can compute some probabilities.
+
+\begin{example}
+Selecting one car at random that has been repaired at this shop, use the tree diagram to compute the probability that
+\begin{enumerate}
+ \item Miranda repaired the car, \(P(M)\),
+ \item the repair failed if Tanya worked on the car, \(P(F|T)\),
+ \item Jose repaired the car and the repair was successful, \(P(J\text{ AND }S)\).
+\end{enumerate}
+
+Notice that we can work top to bottom through the ``branches'' of the tree diagram to consider different probability questions. The top branch contains the ``simple'' probabilities of Miranda, Jose, and Tanya repairing a randomly selected car, like \(P(M)\) above. Working down, the second branch contains conditional probabilities of failure or success, depending on which mechanic performed the repair like \(P(F|T)\) above. We multiply simple and conditional probabilities along the tree diagram's branches to calculate joint probabilities of various outcomes, like \(P(J\text{ AND }S)\) above. With a complete tree diagram, we can ask and answer questions like those above quickly.
+\end{example}
+
+But what about probability questions that the diagram does not answer directly? 
+
+\begin{example}
+Selecting one car at random, what is the probability that Tanya repaired the car, if that repair failed, \(P(T|F)\)? This question ``reverses the condition'' from conditional probability problem above. Though \(P(T|F)\) is not in the diagram, we can use the conditional probability formula as follows:
+
+\[ P(T|F) = \frac{P(T \text{ AND } F)}{P(F)} \]
+
+Now from the tree diagram, we see
+\[P(T \text{ AND } F) = P(T) \cdot P(F|T) = (0.15)(0.20) = 0.03.\]
+Since there are three mechanics, we can calculate \(P(F)\):
+\begin{align*}
+P(F) &= P(M \text{ AND } F) + P(J \text{ AND } F) + P(T \text{ AND } F) \\
+        &= (0.55)(0.05) + (.30)(0.10) + (0.15)(0.20) \\
+        &= 0.0875
+\end{align*}
+Then we have \(P(T|F) = \frac{P(T \text{ AND } F)}{P(F)} = \frac{0.03}{0.0875} \approx 0.343\), so there is a 34.3\% chance that if a random repair failed, Tanya did that repair.
+\end{example}
+
+Bayes Theorem is a mathematical formula that encodes this process. In this case, \emph{Bayes Theorem} combines our work above into a formula like so:
+
+\[
+P(T|F) = \frac{P(T) \cdot P(F|T) }{  P(M \text{ AND } F) + P(J \text{ AND } F) + P(T \text{ AND } F) }
+\]
+Computation using this formula is as complicated as the computations we did above using the tree diagram to guide our work. 
+
+At the introductory level, it is wise to focus on using the tree diagram and the conditional probability formula to ``reverse the condition,'' rather than to worry about memorizing and using the Bayes Theorem formula.
+
+\section{Calculate and interpret marginal distribution}
+
+Consider the contingency table shown below for the number of males and females in a class using an OER (Open Educational Resource) or a textbook.
+
+\begin{center}
+\begin{tabular}{l|cc}
+& OER & Textbook \\ \hline
+Male & 10 & 25 \\
+Female & 20 & 5	
+\end{tabular}
+\end{center}
+
+Since this table shows counts, we would also refer to it as a frequency table.  Since the totals for each sex and for each class type are also of interest, we can include a row and a column for the respective totals, as shown below.
+
+\begin{center}
+\begin{tabular}{l|cc|c}
+& OER & Textbook & Total \\ \hline
+Male & 10 & 25 & 35 \\
+Female & 20 & 5 & 25 \\ \hline
+Total & 30 & 30 & 60
+\end{tabular}
+\end{center}
+
+The totals end up in the margins of the contingency table. The Total column shows the \emph{marginal distribution} of sex, and the Total row shows the \emph{marginal distribution} of class type. 
+
+The contingency table can also be represented using proportions as shown below.
+
+\begin{center}
+\begin{tabular}{l|cc|c}
+& OER & Textbook & Total \\ \hline
+Male & 0.17 & 0.42 & 0.58 \\
+Female & 0.33 & 0.08 & 0.42 \\ \hline
+Total & 0.50 & 0.50 & 1
+\end{tabular}
+\end{center}
+
+Here we can see the relative marginal distributions of sex and of class type in the Total column and row, respectively.
+
+\section{Homework}
+\begin{enumerate}
+ \item In some states, police used to set up DUI checkpoints where they would stop drivers and try to determine if each driver had been drinking.  Assume on a given night 15\% of people are drinking. If you have been drinking, police will stop you and give you a breath check 85\% of the time. If you have not been drinking, police will stop you and give you a breath check 10\% of the time.
+ \begin{enumerate}
+  \item Create a tree diagram for this scenario. Use \(B = \) Breath check and \(D = \) Drinking.
+  \item What is the probability that you are drinking, given that you did have a break check, that is, find \(P(D|B^{c})\).
+ \end{enumerate}
+ \item Confidence is of the utmost importance for soccer players.  A good player will score on 80\% of their penalty kicks.  If they score on their first penalty kick, there is a 90\% chance they will score on a second penalty kick.  If they miss their first penalty kick, there is a 70\% chance they will not score on a second penalty kick.
+
+\begin{center}
+ \begin{enumerate}
+  \item Create a tree diagram for this scenario. Use \(S =\) scores and \(S^{c} =\) Does not score.
+  \item Find \(P(S)\)
+  \item Find \(P(S \text{ 2nd} | S^{c} \text{ 1st})\)
+  \item Find \(P(S \text{ 1st} | S^{c} \text { 2nd})\)
+ \end{enumerate}
+\end{center}
+
+ \item A food packaging factory has both machines and workers on assembly line.  First, machines do part of the packaging and then the worker finishes it by hand.  There is a 1\% chance a machine makes a defect in the package.  If the machine does make a defect, there is a 70\% chance the worker also makes a defect.  If the machine does not make a defect, there is a 20\% chance the worker makes a defect.
+ \begin{enumerate}
+  \item Create a tree diagram for this scenario. Use \(M =\) Machine Defect and \(W =\) Worker Defect.
+  \item Find \(P(M \text{ AND } W)\)
+  \item Find \(P(W|M)\)
+  \item What is the probability the machine made a defect given that a worker made a defect?
+ \end{enumerate}
+
+ \item A computer company is investigating its sales. Customers buy laptops or desktops, which are either new or used. The company knows about 10\% of people buy new laptops, about 60\% of people buy laptops and about 30\% of people buy new computers.
+ \begin{enumerate}
+ \item Complete the two way table below.
+  
+  \begin{center}
+  \begin{tabular}{l|cc|c}
+  & New & Used & Total \\ \hline
+  Laptop & 0.10 & & 0.60 \\
+  Desktop & & & \\ \hline
+  Total & 0.30 & & 1
+  \end{tabular}
+  \end{center}
+  
+ \item Give the marginal distribution of computer style.
+ \item Find \( P(\text{Laptop AND Used}) \).
+ \item Find \( P( \text{ New OR Desktop } ) \).
+ \item Find \( P( \text{Laptop} | \text{New} ) \).
+ \end{enumerate}
+ \item Consider the table below for products at a grocery store.
+
+\begin{center}
+ \begin{tabular}{l|cc|c}
+  & Sale item & Non-sale item & Total \\ \hline
+  Organic &  & &  \\
+  Non-organic & & & \\ \hline
+  Total &  & & 
+ \end{tabular}
+\end{center}
+  \begin{enumerate}
+  \item Assume 40\% of products are organic, 20\% of products are non-organic and on sale, and 90\% of products are neither on sale nor organic.  Complete the two way table.  
+  \item Find \( P(\text{Non-organic}) \).
+  \item Find \( P(\text{Non-organic AND Non-sale}) \).
+  \item Find \( P(\text{Organic} | \text{Sale}) \).
+  \end{enumerate}
+\end{enumerate}

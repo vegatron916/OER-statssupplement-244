@@ -1,0 +1,150 @@
+\setcounter{chapter}{5}
+\chapter[Normal Dist]{The Normal Distribution}
+
+\section[Normal approximation]{Approximate a binomial probability using a normal distribution.}
+
+There is an interesting relationship between discrete and continuous probability models. As the number of trials increases, each discrete model looks more and more continuous.
+
+\begin{example}
+Flipping a fair coin a set number of times can be modeled using \(B(n,0.50)\). Observe how the binomial distribution changes as we increase \(n\) from smaller to larger values. 
+In Figures \ref{fig:Bn1p50} through \ref{fig:Bn500p50}, we see the distributions for \(n=1\), \(n=5\), \(n=20\), \(n=50\), \(n=100\) and \(n=500\), respectively.
+\end{example}
+
+\begin{figure}
+	\centering
+    \includegraphics[width=4in]{images/b_1_50.png}
+	\caption{\(B(1,0.50)\)}
+	\label{fig:Bn1p50}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+    \includegraphics[width=4in]{images/b_5_50.png}
+	\caption{\(B(5,0.50)\)}
+	\label{fig:Bn5p50}
+\end{figure}
+
+\begin{figure}
+	\centering
+    \includegraphics[width=4in]{images/b_20_50.png}
+    \caption{\(B(20,0.50)\)}
+	\label{fig:Bn20p50}
+\end{figure}
+
+\begin{figure}
+	\centering
+    \includegraphics[width=4in]{images/b_50_50.png}
+    \caption{\(B(50,0.50)\)}
+	\label{fig:Bn50p50}
+\end{figure}
+
+\begin{figure}
+	\centering
+    \includegraphics[width=4in]{images/b_100_50.png}
+    \caption{\(B(100,0.50)\)}
+	\label{fig:Bn100p50}
+\end{figure}
+
+\begin{figure}
+	\centering
+    \includegraphics[width=4in]{images/b_500_50.png}
+    \caption{\(B(500,0.50)\)}
+	\label{fig:Bn500p50}
+\end{figure}
+
+We see that as \(n\) increases, the discrete binomial distribution looks more and more like the continuous normal model. This means that if we conduct enough trials, that is if \(n\) is large, a binomial distribution can be approximated using a normal model. %(This was a useful technique before powerful computing technology became widely available.)
+
+\begin{example}
+In basketball, an excellent player can make \(85\%\) of their free throws. We can view that player's free throw attempts as Bernoulli trials with success probability \(p = 0.85\). Let's consider \(B(n,0.85)\) and observe how the binomial distribution changes as we increase \(n\) from smaller to larger values. In Figures \ref{fig:Bn1p85} through \ref{fig:Bn500p85}, we see the distributions for \(n=1\), \(n=5\), \(n=20\), \(n=50\), \(n=100\) and \(n=500\), respectively.
+\end{example}
+
+\begin{figure}
+	\centering
+    \includegraphics[width=4in]{images/bb_1_85.png}
+	\caption{\(B(1,0.85)\)}
+	\label{fig:Bn1p85}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+    \includegraphics[width=4in]{images/bb_5_85.png}
+	\caption{\(B(5,0.85)\)}
+	\label{fig:Bn5p85}
+\end{figure}
+
+\begin{figure}
+	\centering
+    \includegraphics[width=4in]{images/bb_20_85.png}
+    \caption{\(B(20,0.85)\)}
+	\label{fig:Bn20p85}
+\end{figure}
+
+\begin{figure}
+	\centering
+    \includegraphics[width=4in]{images/bb_50_85.png}
+    \caption{\(B(50,0.85)\)}
+	\label{fig:Bn50p85}
+\end{figure}
+
+\begin{figure}
+	\centering
+    \includegraphics[width=4in]{images/bb_100_85.png}
+    \caption{\(B(100,0.85)\)}
+	\label{fig:Bn100p85}
+\end{figure}
+
+\begin{figure}
+	\centering
+    \includegraphics[width=4in]{images/bb_500_85.png}
+    \caption{\(B(500,0.85)\)}
+	\label{fig:Bn500p85}
+\end{figure}
+
+For \(n = 1\), \(n = 5\), and \(n = 20\), the binomial distributions are skewed left. As \(n=1\), \(n=5\), and \(n=20\), the binomial distributions are skewed left. As \(n\) increases, the distributions look increasingly unimodal and symmetric. If \(n\) is large enough, we can use a normal model to approximate the binomial distribution. (This was a useful approximation before the advent of powerful computing.) If \(n\) is large enough, we can use a normal model to approximate the binomial distribution, even when \(p\) is near \(0\) or \(1\).
+
+How large must \(n\) be for the distribution to become unimodal and symmetric? Statisticians have agreed that when both the expected number of ``successes'' and the expected number of ``failures'' are both \(10\) or greater, that the normal approximation makes sense. 
+
+We can calculate the expected number of successes by multiplying the likelihood of success \(p\) by the number of trials \(n\), so we check if \(np \geq 10\). For failures, we check if \(nq \geq 10\). Table \ref{tab:B(500,n)} shows these calculations for Example 6.2.
+
+\begin{table}[b]
+\centering
+\begin{tabular}{lll}
+\(n\) &  \(np\) & \(nq\) \\ \hline
+\(1  \) & \((1)(0.85)   = 0.85\) & \((1)(0.15) =  0.15\) \\
+\(5  \) & \((5)(0.85)   = 4.25\) & \((5)(0.15) =  0.75\) \\
+\(20 \) & \((20)(0.85)  = 17  \) & \((20)(0.15) = 3\)  \\
+\(50 \) & \((50)(0.85)  = 42.5\) & \((50)(0.15) =  7.5\) \\
+\(100\) & \((100)(0.85) = 85  \) & \((100)(0.15) =  15\) \\
+\(500\) & \((500)(0.85) = 425 \) & \((500)(0.15) =  75\) 
+\end{tabular}
+\caption{}
+\label{tab:B(500,n)}
+\end{table}
+
+Notice that when the \(np \geq 10\) and \(nq \geq 10\) thresholds are met between \(n=50\), when \(np =42.5\) and \(nq= 7.5\), and \(n=100\), when \(np=85\) and \(nq=15\) the distributions look both unimodal and symmetric. Before that point, say for \(n = 20\), the distribution is visibly skewed, so a normal approximation would not make sense.
+
+
+\section{Homework}
+
+\begin{enumerate}
+ \item Consider a ``rare event'', such as \(p = 0.15\).
+  \begin{enumerate}
+  \item Create histograms of the binomial distributions for \(B(n,0.15)\) using \(n=1\), \(n=5\), \(n=20\), \(n=50\), \(n=100\) and \(n=500\), respectively. 
+  \item Describe the shape of each distribution.
+  \item As \(n\) increases, how the the shape change?
+  \item To use a normal approximation, what number of trials, \(n\), is reasonable?
+  \end{enumerate}
+
+ \item PCC's spam filter is expected to allow only \(3\) out of \(100\) spam email messages to make it to your inbox.
+  \begin{enumerate}
+  \item Use the binomial distribution to calculate the probability of having more than \(6\) spam emails out of \(100\) spam emails in your inbox.
+  \item What are the mean \( \mu \) and standard deviation \( \sigma \) of the binomial distribution?
+  \item Use the normal distribution with \( \mu \) and \( \sigma \) from (b) to calculate the probability from (a).
+  \item Does the normal distribution approximate the binomial distribution well here? Why or why not?
+  \end{enumerate}
+ \item PCC's spam filter is expected to allow only \(3\%\) of spam email messages to make it to your inbox. What is the probability of having more than \(35\) spam emails if you were to receive \(1000\). Would you recommend to someone to use the binomial model or the normal approximation of the binomial? Provide a reason.
+
+ \item PCC's spam filter is expected to allow only \(3\%\) of spam email messages to make it to your inbox. Assume you can use the normal approximation of the binomial. What is the probability of having more than \(35\) spam emails if you were to receive \(1000\)?
+\end{enumerate}

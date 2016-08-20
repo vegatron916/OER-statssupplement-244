@@ -1,0 +1,61 @@
+\setcounter{chapter}{8}
+\chapter{Hypothesis Testing}
+
+\section{Comparing information a confidence interval provides versus a significance test}
+
+Introductory Statistics Example 9.17
+
+Joon believes that \(50\%\) of first-time brides in the United States are younger than their grooms. She performs a hypothesis test to determine if the percentage is the same or different from  \(50\%\). Joon samples  \(100\) first-time brides and  \(53\) reply that they are younger than their grooms. For the hypothesis test, she uses a  \(1\%\) level of significance.
+
+A hypothesis test is designed to test the likelihood of an assumption (the null hypothesis \(H_{o}\) in light of collected sample data. In Example  \(9.17\), the test returned p-value  \(0.5485\). Here, the p-value means that if the proportion of first-time brides in the U.S. who are younger than their partners is  \(50\%\), then the likelihood of observing the sample proportion,  \(53\%\)or greater, (or of observing  \(47\%\) or lower) would be  \(54.85\%\). See Figure (picture of p-value below). That's not unlikely, so these data do not throw doubt on the assumption that half of first-time brides are younger than their partners.
+
+
+
+Another way to consider the likelihood of the assumption, \(H_{o}\), is to construct a confidence interval. Using the same data, we can construct a  \(95\%\) confidence interval to estimate the proportion of first-time brides who are younger than their partners. With \(p'=0.53\)and  \(n=100\), we have, 
+\(0.53 \pm 1.95 \sqrt{\frac{(0.53)(0.47)}{100}}\) which yields the interval \((0.48,0.58)\). 
+
+This says that, based on sample data, we estimate with confidence level \(95\%\) that the proportion of all first-time brides who are younger than their partners is between  \(48\%\) and  \(58\%\). 
+
+Like the hypothesis test, this confidence interval does not throw any doubt on the assumption, since the assumed value, \(p_{o}=0.50\), from the hypothesis test falls within the confidence interval. 
+
+Why have two methods here? 
+
+The subtle difference between the hypothesis test and the confidence interval is the standard deviation for the sampling model. For a hypothesis test, we calculate standard deviation using the assumed proportion, \(p_{o}\) and the formula \(\sqrt{\frac{(p_{0})(q_{o})}{n}}\). But for a confidence interval, we calculate standard deviation using the sample proportion, \(p'\) and the formula \(\sqrt{\frac{(p')(q')}{n}}\). When the assumption and the statistic do not differ much, these models are very similar.
+
+%(FIGURE SHOWING BOTH DISTRIBUTIONS SEPARATELY?)
+
+
+\section[Significance vs.~Value]{Statistical Significance vs. Practical Value}
+
+Once a significance level, \(\alpha\), has been chosen, a hypothesis test's results may or may not have statistical significance. Sometimes, evidence is statistically significant, but that evidence is of little practical value.
+
+\begin{example}
+The National Institutes of Health reports that approximately  \(6\%\)of people suffer from Insomnia. A researcher tests a new surgery procedure with the hypothesis \(H_{o}\) : No change in Insomnia / amount of sleep and \(H_{a}\) : positive change in Insomnia / increased amount of sleep. They set a significance level of  \(0.5\%\) and after their research concludes they obtain a p-value of  \(0.1\%\). They claim their evidence has statistical significance. The surgery is then brought into the private health marketplace at a cost of  \(\$50000\).
+
+While the research claims to have evidence of statistical significance, that evidence is of little practical value to most people since the cost for the surgery is \(\$50000\).
+\end{example}
+
+\begin{example}
+A consumer organization is testing what type of fuel you should use for your car, unleaded or premium. They test the hypothesis \(H_{o}\): no change in MPG and \(H_{a}\): an increase in MPG. They set a significance level of  \(1\%\) and after their testing concludes they obtain a p-value of  \(0.5\%\). They claim their evidence has statistical significance. They print their information in their next magazine as a reason to buy premium fuel. 
+
+The organization claims to have evidence of statistical significance, but the average price for a gallon of unleaded fuel is approximately  \(\$2.05\) and the average price for a gallon of premium fuel is approximately  \(\$2.50\) (as of March 2016, Source: AAA). This means that while they claim to have evidence of statistical significance that average mileage increases using more expensive fuel, we also know that using more expensive fuel makes your increased miles per gallon more expensive. This makes our statistical significance a little less practical.
+\end{example}
+
+\section{Homework}
+
+\begin{enumerate}
+\item Introductory Statistics Example 9.18
+
+Suppose a consumer group suspects that the proportion of households that have three cell phones is  \(30\%\). A cell phone company has reason to believe that the proportion is not  \(30\%\). Before they start a big advertising campaign, they conduct a hypothesis test. Their marketing people survey  \(150\) households with the result that  \(43\) of the households have three cell phones. Using the data in this question, the hypothesis test return a p-value  \(0.7216\). That?s not unlikely, so these data do not throw doubt on the assumption that half of first-time brides are younger than their partners.
+
+Construct a confidence interval to consider the likelihood of the assumption, \(H_{o}\).
+
+
+\item Introductory Statistics 9.5 Homework 100
+
+Recall that question 100 from Homework section 9.5, ``According to an article in Bloomberg Businessweek, New York City's most recent adult smoking rate is  \(14\%\). Suppose that a survey is conducted to determine this year?s rate. Nine out of  \(70\) randomly chosen N.Y. City residents reply that they smoke. Conduct a hypothesis test to determine if the rate is still  \(14\%\) or if it has decreased.''
+
+After conducting a hypothesis test, construct a confidence interval to consider the likelihood of the assumption, \(H_{o}\).
+
+\item  You take a 9:00am bus to go to your 10:00am class and are worried about arriving on time or if you need to take an earlier bus. You decide to test the hypothesis \(H_{o}:\mu=50\) minutes and \(H_{a}: \mu>50\) minutes, in regards to how long the bus ride will take. You collect data by riding the bus \(13\) times, shown below in Figure 1 and preliminary statistics, shown in Figure 2. You then do a hypothesis test and find a p-value of  \(0.0016\), shown in figure 3, thus you declare statistical significance and reject the null hypothesis that the average bus ride time is  \(50\) minutes. You then create a confidence interval based on your data, shown in figure 4, which shows a plausible range for the true average time on the bus. This range is from \(51.17\) minutes to \(54.69\) minutes. While the data has statistical significance, what is the practical meaning?
+\end{enumerate}
